@@ -39,4 +39,4 @@ RUN echo 'date.timezone = UTC' > /etc/php5/cli/conf.d/99-timezone.ini
 ADD aerospike.ini /etc/php5/fpm/conf.d/99-aerospike.ini
 ADD aerospike.ini /etc/php5/cli/conf.d/99-aerospike.ini
 
-CMD /usr/sbin/php5-fpm -F
+CMD ["/usr/sbin/php5-fpm", "-F"]
