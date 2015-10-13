@@ -2,7 +2,7 @@ FROM debian:wheezy
 
 MAINTAINER Ilya Epifanov <elijah.epifanov@gmail.com>
 
-ENV PHP_VERSION=5.5.30
+ENV PHP_VERSION=5.6.14
 
 RUN apt-get update \
  && apt-get install -y curl software-properties-common python-software-properties \
@@ -11,7 +11,7 @@ RUN apt-get update \
 
 RUN curl -s http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 
-RUN echo 'deb http://packages.dotdeb.org wheezy-php55 all' > /etc/apt/sources.list.d/dotdeb.list
+RUN echo 'deb http://packages.dotdeb.org wheezy-php56 all' > /etc/apt/sources.list.d/dotdeb.list
 RUN echo "deb http://ftp.de.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
 
 RUN apt-get update \
