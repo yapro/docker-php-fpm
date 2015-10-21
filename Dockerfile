@@ -22,7 +22,7 @@ RUN echo 'deb http://packages.dotdeb.org wheezy-php55 all' > /etc/apt/sources.li
 RUN echo "deb http://ftp.de.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
 
 RUN apt-get update \
- && apt-get install -y "php5-cli=$PHP_VERSION-*" "php5-fpm=$PHP_VERSION-*" "php5-curl=$PHP_VERSION-*" "php5-mysqlnd=$PHP_VERSION-*" "php5-pgsql=$PHP_VERSION-*" "php5-gd=$PHP_VERSION-*" php5-mongo php5-memcache php5-apcu "php5-intl=$PHP_VERSION-*" php5-imagick php5-mcrypt --no-install-recommends \
+ && apt-get install -y "php5-cli=$PHP_VERSION-*" "php5-fpm=$PHP_VERSION-*" "php5-curl=$PHP_VERSION-*" "php5-mysqlnd=$PHP_VERSION-*" "php5-pgsql=$PHP_VERSION-*" "php5-gd=$PHP_VERSION-*" php5-mongo php5-memcache php5-apcu "php5-intl=$PHP_VERSION-*" "php5-xdebug=$PHP_VERSION-*" php5-imagick php5-mcrypt --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
