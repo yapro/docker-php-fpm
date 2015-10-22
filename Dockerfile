@@ -34,7 +34,7 @@ RUN curl -sL --raw https://github.com/aerospike/aerospike-client-php/archive/${A
  && cd /tmp/aerospike/src/aerospike \
  && apt-get update \
  && apt-get install -y build-essential autoconf libssl-dev liblua5.1-dev "php5-dev=$PHP_VERSION-*" "php-pear=$PHP_VERSION-*" --no-install-recommends \
- && ./build.sh \
+ && AEROSPIKE_C_CLIENT=3.1.24 ./build.sh \
  && make install \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
