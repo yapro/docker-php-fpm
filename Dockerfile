@@ -41,9 +41,9 @@ RUN curl -sL --raw https://github.com/aerospike/aerospike-client-php/archive/${A
 
 ENV PATH=/usr/local/bin:/bin:/usr/bin
 
-RUN echo 'date.timezone = UTC' > /etc/php5/fpm/conf.d/99-timezone.ini
-RUN echo 'date.timezone = UTC' > /etc/php5/cli/conf.d/99-timezone.ini
-ADD aerospike.ini /etc/php5/fpm/conf.d/99-aerospike.ini
-ADD aerospike.ini /etc/php5/cli/conf.d/99-aerospike.ini
+RUN echo 'date.timezone = UTC' > /etc/php5/fpm/conf.d/00-timezone.ini
+RUN echo 'date.timezone = UTC' > /etc/php5/cli/conf.d/00-timezone.ini
+ADD aerospike.ini /etc/php5/fpm/conf.d/00-aerospike.ini
+ADD aerospike.ini /etc/php5/cli/conf.d/00-aerospike.ini
 
 CMD ["/usr/sbin/php5-fpm", "-F"]
