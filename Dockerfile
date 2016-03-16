@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER Ilya Epifanov <elijah.epifanov@gmail.com>
 
-ENV PHP_VERSION=5.6.14
+ENV PHP_VERSION=5.6.17
 
 RUN apt-get update \
  && apt-get install -y curl ca-certificates software-properties-common python-software-properties \
